@@ -1,0 +1,6 @@
+i = input("enter student name : ")
+print(i)
+y = input("enter student age : ")
+print(y)
+z = input("enter student phone number : ")
+print(z)
