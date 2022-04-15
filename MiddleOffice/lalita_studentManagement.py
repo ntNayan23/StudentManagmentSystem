@@ -1,36 +1,47 @@
-print("=========================================\n")
-print("  Wainganga College Of engineering  \n")
-print("=========================================\n")
+def Home():
+    name = input("enter your name")
+    age = input("enter your age")
+    phone_no = input("enter your phone_no")
+    print(name, age, phone_no)
 
-print("Choose your Action\n")
-print("1.	Add new Student")
-print("2.	Delete Student")
-print("3. 	Search Student")
 
-choice = int(input("Your input please :"))
-print("User have selected: userChoice={}".format(choice))
-if(choice == 1):
-    print("=========================================\n")
-    print("  Wainganga College Of engineering - Add New Student \n")
-    print("=========================================\n")
+def Header():
+    print('''* \nStudent Management System\n***''')
+
+
+def Add():
+    print("Add New Student")
     name = input("Enter Name :- ")
     age = int(input("Enter Age :- "))
-    phoneNumber = int(input("Enter Phone Number :-"))
+    phone_number = int(input("Enter Phone Number :-"))
     print("New Student is added")
-elif(choice == 2):
-    print("=========================================\n")
-    print("  Wainganga College Of engineering - Delete Student \n")
-    print("=========================================\n")
-    name = input("Enter Name of Student:- ")
-    print("Deleted Student")
-elif(choice == 3):
-    print("=========================================\n")
-    print("  Wainganga College Of engineering - search Student \n")
-    print("=========================================\n")
-    name = input("Enter Name of Student:- ")
-    age = input("Enter age of Student:- ")
-    phoneNumber = input("Enter phone Number:- ")
-    print("Name="+name, "age="+age, "phoneNumber="+phoneNumber)
 
-else:
-    print("Invalid Choice")
+
+def Delete():
+    name = input("Enter Name of Student:- ")
+    print("Delete Student")
+
+
+def Display():
+    name = input("Enter Name of Student:- ")
+    print("It should display student Name", name)
+def choice():
+    print(''' 1.Add New Student\n 2.Delete Student\n 3.Search Student''')
+    choice = int(input("Enter You choice :- "))
+    return choice
+
+
+if __name__ == "__main__":
+    Header()
+    ch = choice()
+    if (ch== 1):
+        Header()
+        Add()
+    elif (ch== 2):
+        Header()
+        Delete()
+    elif (ch== 3):
+        Header()
+        Display()
+    else:
+        print("Invalid Choice")
